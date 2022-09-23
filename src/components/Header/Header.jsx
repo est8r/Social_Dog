@@ -6,7 +6,9 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <Link to="/" aria-label="Dogs - Home"></Link>
+        <Link to="/" aria-label="Dogs - Home">
+          <img width={50} height={50} src={Dogs} />
+        </Link>
         <Link to="/login">Login / Criar</Link>
       </nav>
     </header>
