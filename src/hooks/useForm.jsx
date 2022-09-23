@@ -17,6 +17,15 @@ const useForm = (validacao) => {
     if (value.length === 0) {
       setError('Preencha um valor.');
       return false;
+    } else if (
+      validacoes[validacao] &&
+      !validacoes[validacao].regex.test(value)
+    ) {
+      setError(validacoes[validacao].message);
+      return false;
+    } else {
+      setError(null);
+      return true;
     }
   }
 
