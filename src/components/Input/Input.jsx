@@ -1,4 +1,5 @@
 import React from 'react';
+import S from './Input.module.css';
 
 const Input = ({
   label,
@@ -11,8 +12,10 @@ const Input = ({
   onBlur,
 }) => {
   return (
-    <div>
-      <label htmlFor={name}>{label}</label>
+    <div className={S.geral}>
+      <label className={S.label} htmlFor={name}>
+        {label}
+      </label>
       <input
         id={name}
         name={name}
@@ -20,9 +23,10 @@ const Input = ({
         value={value}
         placeholder={placeholder}
         onChange={onChange}
+        className={S.input}
         onBlur={onBlur}
       />
-      {error && <p>{error}</p>}
+      {error && <p className={S.error}>{error}</p>}
     </div>
   );
 };
