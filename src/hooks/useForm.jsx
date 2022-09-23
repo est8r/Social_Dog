@@ -8,8 +8,15 @@ const validacoes = {
   },
 };
 
-const useForm = () => {
-  return {};
+const useForm = (validacao) => {
+  const [value, setValue] = useState('');
+  const [error, setError] = useState(null);
+
+  return {
+    value,
+    setValue,
+    error,
+  };
 };
 
 export default useForm;
