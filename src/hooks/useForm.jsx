@@ -29,9 +29,15 @@ const useForm = (validacao) => {
     }
   }
 
+  function onChange({ target }) {
+    if (error) validate(target.value);
+    setValue(target.value);
+  }
+
   return {
     value,
     setValue,
+    onChange,
     error,
   };
 };
