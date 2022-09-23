@@ -12,6 +12,7 @@ const Input = ({ type, name, placeholder, value, onChange, error, onBlur }) => {
         onChange={onChange}
         onBlur={onBlur}
       />
+      {error && <p>{error}</p>}
     </div>
   );
 };
